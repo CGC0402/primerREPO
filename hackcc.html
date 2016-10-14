@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>hack cc</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="contenedor" class="borde">
+		
+		  <div id="top">
+
+		        <h1>Hack cc</h1>
+
+		  </div>
+
+		  <div id="mid">
+
+		          <form name="formulario1" action='#' onsubmit="return fn()">
+
+		              <textarea name="paginacc" rows="2" cols="20" placeholder="Pega aquí el codigo fuente de la pagina"></textarea><br><br>
+			          <input type="submit" name="enviar" value="Hack">
+		          	
+		          </form>
+		          
+		  </div>
+
+		  <div id="bot">
+
+                      <a id="link" href="http://www.cinecalidad.com" target="_blank">Aquí aparecera el link al video! Yep!</a>
+
+		  </div>
+	
+	</div>
+
+ <script type="text/javascript">
+
+	var fn = function () {
+
+        var b1=0;
+        var b2=0;
+        var str="";
+        var d="";
+
+		var target = document.formulario1.paginacc.value;
+
+		for (var i=0; i<target.length; i++){
+
+	        
+            if(target[i]==="+" && target[i+1]==="d" && target[i+2]==="e")
+            {
+            b1++;
+	        }
+ 
+	        if(b1===18)
+	        {
+ 
+                 if(target[i]==='"'){ b2++; }
+                 if(b2===1 && target[i]!=='"' ){ str=str+target[i];  }   
+         
+            }
+
+		}
+
+		
+			str=str.split(" ");
+			for(i=0;i<str.length;i++)
+				{
+					d+=String.fromCharCode(parseInt(str[i])-7);
+
+				}
+
+                 if(target.length > 100) {
+
+                       document.querySelector('#link').textContent="http://thevideos.tv/embed-"+d+".html";
+					   document.querySelector('#link').href="http://thevideos.tv/embed-"+d+".html";
+
+                 }
+
+		return false;
+
+	}
+
+
+ </script>
+
+
+
+</body>
+</html>
+
+
+
